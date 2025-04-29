@@ -18,6 +18,6 @@ def guardar_dado (dados_rolados, dados_guardados, guardar):
     
     guardados.append(dados_rolados[guardar])
 
-    novo = (dados_guardados,guardados)
+    novo = [dados_guardados,guardados]
 
     return novo
