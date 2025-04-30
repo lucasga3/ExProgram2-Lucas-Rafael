@@ -104,10 +104,10 @@ def calcula_pontos_quina (faces):
             dicio[dado] += 1
         else:
             dicio[dado] = 1
-    for quantidade in dicio.values():
+
+    for quantidade in dicio.values(): 
+        resultado = 0
         if quantidade >= 5:
-            resultado = 0
-            for i in range (len(faces)):
-                resultado += faces[i]
+            resultado += 50
             return resultado
     return 0
