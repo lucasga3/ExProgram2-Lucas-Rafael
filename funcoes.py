@@ -81,3 +81,18 @@ def calcula_pontos_full_house (faces):
             resultado += faces[j]
     
     return resultado
+
+def calcula_pontos_quadra (faces):
+    dicio = {}
+    for dado in faces:
+        if dado in dicio:
+            dicio[dado] += 1
+        else:
+            dicio[dado] = 1
+    
+    resultado = 0
+    if 4 in dicio.values():
+        for i in range (len(faces)):
+            resultado += faces[i]
+    
+    return resultado
