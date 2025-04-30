@@ -89,10 +89,10 @@ def calcula_pontos_quadra (faces):
             dicio[dado] += 1
         else:
             dicio[dado] = 1
-    
-    resultado = 0
-    if 4 in dicio.values():
-        for i in range (len(faces)):
-            resultado += faces[i]
-    
-    return resultado
+    for quantidade in dicio.values():
+        if quantidade >= 4:
+            resultado = 0
+            for i in range (len(faces)):
+                resultado += i
+            return resultado
+    return 0
