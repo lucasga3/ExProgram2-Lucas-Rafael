@@ -111,3 +111,15 @@ def calcula_pontos_quina (faces):
             resultado += 50
             return resultado
     return 0
+
+def calcula_pontos_regra_avancada (faces):
+
+    dicio = {
+        'cinco_iguais': calcula_pontos_quina(faces),
+        'full_house': calcula_pontos_full_house(faces),
+        'quadra': calcula_pontos_quadra(faces),
+        'sem_combinacao': calcula_pontos_soma(faces),
+        'sequencia_alta': calcula_pontos_sequencia_alta(faces),
+        'sequencia_baixa': calcula_pontos_sequencia_baixa(faces)
+    }
+    return dicio
