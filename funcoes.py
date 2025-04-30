@@ -93,6 +93,6 @@ def calcula_pontos_quadra (faces):
         if quantidade >= 4:
             resultado = 0
             for i in range (len(faces)):
-                resultado += i
+                resultado += faces[i]
             return resultado
     return 0
