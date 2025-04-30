@@ -45,5 +45,8 @@ def calcula_pontos_regra_simples (faces):
     return dicio
 
 def calcula_pontos_soma (faces):
-    resultado = sum(faces)
+    resultado = 0
+    for i in range(len(faces)):
+        resultado += faces[i]
+    
     return resultado
