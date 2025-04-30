@@ -36,6 +36,8 @@ def remover_dado (dados_rolados, dados_guardados, remover):
 
 def calcula_pontos_regra_simples (faces):
     dicio = {}
+    if len(faces) < 0:
+        return {}
 
     for i in range (1,7):
         dicio[i] = 0
@@ -44,4 +46,4 @@ def calcula_pontos_regra_simples (faces):
 
     return dicio
 
-print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
+print(calcula_pontos_regra_simples([]))
