@@ -33,3 +33,15 @@ def remover_dado (dados_rolados, dados_guardados, remover):
 
     novo = [rolados,dados_guardados]
     return novo
+
+def calcula_pontos_regra_simples (faces):
+    dicio = {}
+
+    for i in range (1,7):
+        dicio[i] = 0
+    for dado in faces:
+        dicio[dado] += dado
+
+    return dicio
+
+print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
