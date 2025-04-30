@@ -68,8 +68,16 @@ def calcula_pontos_sequencia_alta (faces):
     return 0
 
 def calcula_pontos_full_house (faces):
+    dicio = {}
+    for dado in faces:
+        if dado in dicio:
+            dicio[dado] += 1
+        else:
+            dicio[dado] = 1
+    
     resultado = 0
-    for i in range(len(faces)):
-        resultado += faces[i]
+    if 3 in dicio.values() and 2 in dicio.values():
+        for j in range(len(faces)):
+            resultado += faces[j]
     
     return resultado
