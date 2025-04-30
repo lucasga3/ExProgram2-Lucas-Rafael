@@ -96,3 +96,20 @@ def calcula_pontos_quadra (faces):
                 resultado += faces[i]
             return resultado
     return 0
+
+def calcula_pontos_quina (faces):
+    dicio = {}
+    for dado in faces:
+        if dado in dicio:
+            dicio[dado] += 1
+        else:
+            dicio[dado] = 1
+    
+    for quantidade in dicio.values():
+        if quantidade >= 5:
+            resultado = 0
+            for i in range(len(faces)):
+                resultado += faces[i]
+                return resultado
+
+    return 0
