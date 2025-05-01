@@ -123,3 +123,16 @@ def calcula_pontos_regra_avancada (faces):
         'sequencia_baixa': calcula_pontos_sequencia_baixa(faces)
     }
     return dicio
+
+def faz_jogada(dados, categoria, cartela):
+    if categoria in cartela['regra_simples']:
+        total = calcula_pontos_regra_simples(dados)
+        if cartela['regra_simples'][categoria] == -1:
+            cartela['regra_simples'][categoria] == total[categoria]
+    
+    elif categoria in cartela['regra_avancada']:
+        total = calcula_pontos_regra_avancada(dados)
+        if cartela['regra_avancada'][categoria] == -1:
+            cartela['regra_avancada'][categoria] = total[categoria]
+
+    return cartela
