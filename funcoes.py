@@ -128,7 +128,7 @@ def faz_jogada(dados, categoria, cartela):
     if categoria in cartela['regra_simples']:
         total = calcula_pontos_regra_simples(dados)
         if cartela['regra_simples'][categoria] == -1:
-            cartela['regra_simples'][categoria] == total[categoria]
+            cartela['regra_simples'][categoria] == total[int(categoria)]
     
     elif categoria in cartela['regra_avancada']:
         total = calcula_pontos_regra_avancada(dados)
